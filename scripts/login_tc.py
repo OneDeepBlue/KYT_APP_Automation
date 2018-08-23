@@ -19,7 +19,7 @@ class LoginTest(unittest.TestCase):
         # token = json.loads(body)['token']
         # print token
         message = req.json()['message']
-        print req.text
+        # print req.text
         self.assertEqual(message, message_ass, '测试失败，返回信息不是%s'%message_ass)
 
 if __name__ == '__main__':
