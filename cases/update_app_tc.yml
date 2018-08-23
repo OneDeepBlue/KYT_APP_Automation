@@ -1,0 +1,6 @@
+
+
+- data:
+    body: '{"os_ver":"HUAWEI MLA-AL10/4.4.2","platform":"android","ver_name":"2.0.6","ver_code":206}'
+    head: '{"appid":"KYTESTDRV","command":"Upgrade","device_id":"863064010288340","version":"1.0","sign":"8b55018edb72b491","token":"","encrypt_type":0}'
+  message_ass:

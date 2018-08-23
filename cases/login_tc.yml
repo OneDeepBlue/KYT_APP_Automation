@@ -1,0 +1,32 @@
+
+
+#登录测试
+#用户名密码正确
+- data:
+    body: '{"datainfo":null,"password":"a0b923820dcc509a","userno":"simon"}'
+    head: '{"appid":"KYTESTDRV","command":"StaffLogin","device_id":"F30000370000E1","encrypt_type":0,"sign":"66da9672e0ff00d2","token":"","version":"1.1"}'
+  message_ass:
+
+#错误密码
+- data:
+    body: '{"datainfo":null,"password":"a0b923820dcc509a1","userno":"simon"}'
+    head: '{"appid":"KYTESTDRV","command":"StaffLogin","device_id":"F30000370000E1","encrypt_type":0,"sign":"66da9672e0ff00d2","token":"","version":"1.1"}'
+  message_ass: '密码错误！'
+
+#账号不存在
+- data:
+    body: '{"datainfo":null,"password":"a0b923820dcc509a1","userno":"simon123"}'
+    head: '{"appid":"KYTESTDRV","command":"StaffLogin","device_id":"F30000370000E1","encrypt_type":0,"sign":"66da9672e0ff00d2","token":"","version":"1.1"}'
+  message_ass: '账号错误！'
+
+#密码为空
+- data:
+    body: '{"datainfo":null,"password":"","userno":"simon"}'
+    head: '{"appid":"KYTESTDRV","command":"StaffLogin","device_id":"F30000370000E1","encrypt_type":0,"sign":"","token":"","version":"1.1"}'
+  message_ass: '密码不能为空'
+
+#账号密码都为空
+- data:
+    body: '{"datainfo":null,"password":"","userno":""}'
+    head: '{"appid":"KYTESTDRV","command":"StaffLogin","device_id":"F30000370000E1","encrypt_type":0,"sign":"","token":"","version":"1.1"}'
+  message_ass: '用户名不能为空'
